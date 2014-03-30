@@ -34,7 +34,7 @@ struct Apple {
 
 impl Worm {
 	fn move(&mut self) {
-		let head = self.pieces[0].clone();
+		let head = self.pieces[0];
 
 		match self.dir {
 			Up => { self.pieces.unshift(Piece {x: head.x, y: head.y - 1}) }
@@ -55,10 +55,10 @@ impl Worm {
 			return Err(false);
 		}
 
-		let head = self.pieces[0].clone();
+		let head = self.pieces[0];
 
 		for i in range(1, self.pieces.len()) {
-			let piece = self.pieces[i].clone();
+			let piece = self.pieces[i];
 
 			if piece.x == head.x && piece.y == head.y {
 				return Err(true);
