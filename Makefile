@@ -1,0 +1,2 @@
+all:
+	rustc -L. -L/usr/local/Cellar/sdl/1.2.15/lib/ -C link-args=" -I/usr/local/Cellar/sdl/1.2.15/include/SDL -framework CoreFoundation -framework CoreGraphics -framework AppKit /usr/local/Cellar/sdl/1.2.15/libexec/SDLMain.m " worm.rs
